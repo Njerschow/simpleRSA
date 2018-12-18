@@ -314,7 +314,7 @@ bitset<32> trentSig(string name, unsigned int e, unsigned int n, unsigned int d,
     unsigned int s = fastExp(hr.to_ulong(), d, n); //signature
 
     if (print) {
-        cout << "r = " << r << endl << "h(r) = " << hr << endl << "s = " << s << endl;
+        cout << "r = " << r << endl << "h(r) = " << hr << endl << "s = " << bitset<32>(s) << endl;
 
         cout << endl << "line:209" << endl;
         cout << "h(r) = " << hr.to_ulong() << ", s = " << s << endl;
@@ -449,7 +449,7 @@ int main(int argc, char** argv) {
         //end line 242 logic
 
     }
-
+    //trentSig("Alice", 136, aliceRSA['n'], trentRSA['d'], true);
     return 0;
 }
 
